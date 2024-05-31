@@ -8,15 +8,15 @@ axios.defaults.withCredentials = true;
 axios.defaults.headers.get["Access-Control-Allow-Origin"] = "*";
 function DisplayFoodItems() {
   const getAllFoodItems = () => {
-    axios.get("http://localhost:8086/displayFoodItems").then(
-      (response) => {
-        console.log(response.data);
-        setFoodItems(response.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    // axios.get("http://localhost:8086/displayFoodItems").then(
+    //   (response) => {
+    //     console.log(response.data);
+    //     setFoodItems(response.data);
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
   };
   useEffect(() => {
     getAllFoodItems();

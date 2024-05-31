@@ -20,22 +20,23 @@ export default function LoginRestaurant() {
     // console.log(adminUsername);
     e.preventDefault();
 
-    axios
-      .post("http://localhost:8086/StoreLogin", {
-        username: adminEmail,
-        password: password,
-      })
-      .then((result) => {
-        if (result.data === "Logged In") {
-          message();
-          alert("Log In Successful");
-          window.location.href = "/admin/dashboard";
-        } else {
-          invalid();
-          alert("Wrong Credentials");
-        }
-      })
-      .catch((err) => console.log(err));
+    // axios
+      // .post("http://localhost:8086/StoreLogin", {
+      //   username: adminEmail,
+      //   password: password,
+      // })
+      // .then((result) => {
+      //   if (result.data === "Logged In") {
+      //     message();
+      //     alert("Log In Successful");
+      //     window.location.href = "/admin/dashboard";
+      //   } else {
+      //     invalid();
+      //     alert("Wrong Credentials");
+      //   }
+      // })
+      // .catch((err) => console.log(err));
+      window.location.href = "/admin/dashboard";
   };
 
   const invalid = () => {

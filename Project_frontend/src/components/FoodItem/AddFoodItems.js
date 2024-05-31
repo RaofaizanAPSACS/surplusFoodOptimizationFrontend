@@ -33,21 +33,21 @@ function AddFoodItems() {
     e.preventDefault();
     console.log("InputFields", ...inputFields);
 
-    axios
-      .post("http://localhost:8086/addFoodItems", inputFields)
-      .then((result) => {
-        if (result.data === "Food Items Added") {
-          alert("Food Items Added");
-          notify();
-        } else if (result.data === 500) {
-          alert("Session Logged Out");
-          sessionOut();
-          window.location.href = "/LoginRestaurant";
-        } else {
-          window.location.href = "/LoginRestaurant";
-        }
-      })
-      .catch((err) => console.log(err.response.data.message));
+    // axios
+    //   .post("http://localhost:8086/addFoodItems", inputFields)
+    //   .then((result) => {
+    //     if (result.data === "Food Items Added") {
+    //       alert("Food Items Added");
+    //       notify();
+    //     } else if (result.data === 500) {
+    //       alert("Session Logged Out");
+    //       sessionOut();
+    //       window.location.href = "/LoginRestaurant";
+    //     } else {
+    //       window.location.href = "/LoginRestaurant";
+    //     }
+    //   })
+    //   .catch((err) => console.log(err.response.data.message));
   };
 
   const handleChangeInput = (id, event) => {

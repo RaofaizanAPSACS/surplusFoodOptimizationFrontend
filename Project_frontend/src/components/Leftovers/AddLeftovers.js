@@ -9,17 +9,17 @@ function AddLeftovers() {
   const [foodItems, setFoodItems] = useState([]);
 
   const getAllFoodItems = () => {
-    axios.get("http://localhost:8086/displayFoodItems").then(
-      (response) => {
-        console.log(response.data);
+    // axios.get("http://localhost:8086/displayFoodItems").then(
+    //   (response) => {
+    //     console.log(response.data);
 
-        setFoodItems(response.data);
-      },
-      (error) => {
-        console.log(error);
-        // window.location.href = "/LoginRestaurant";
-      }
-    );
+    //     setFoodItems(response.data);
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //     // window.location.href = "/LoginRestaurant";
+    //   }
+    // );
   };
 
   useEffect(() => {
